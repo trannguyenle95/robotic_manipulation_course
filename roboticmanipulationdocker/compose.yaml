@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  novnc:
+    image: theasp/novnc:latest
+    container_name: novnc
+    environment:
+      - DISPLAY_WIDTH=1920
+      - DISPLAY_HEIGHT=1080
+      - RUN_XTERM=no
+    ports:
+      - "8080:8080"
+
+  ros:
+    build:
+      context: .
+    image: ros:robotic_manipulation
+    container_name: ros
+    environment:
+      - DISPLAY=novnc:0.0
+    volumes:
+      - ./bash_aliases.sh:/root/.bash_aliases
+      - ./tmux.conf:/root/.tmux.conf
+      - ../exercise1:/root/catkin_ws/src/ex1 #Compile only one exercise at a time - set the number here!
+    tty:
+      true
