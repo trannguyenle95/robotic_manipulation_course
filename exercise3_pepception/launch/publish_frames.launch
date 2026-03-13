@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<launch>
+<!--
+Created on: 12/14/18
+    Author: Vladimir Petrik <vladimir.petrik@aalto.fi>
+   Details: This file publishes two transformation into the tf server:
+            1) a transformation between the "base_link" frame and the "pick" frame;
+    The transformation format: x y z qx qy qz qw source_frame target_frame publishing_period-->
+    <!-- (qx, qy, qz, qw)^T is a rotation in a quaternion representation -->
+
+   <arg name="cam_x" default="0.6"/>
+    <arg name="cam_y" default="-1.4009"/>
+    <arg name="cam_z" default="1.4009"/>
+
+
+    <node pkg="tf" name="camera_publisher" type="static_transform_publisher"
+          args="$(arg cam_x) $(arg cam_y) $(arg cam_z)   -0.9239         0         0  0.3827 base_link camera_link 100"/>
+
+     <!--The final target location is specified by "place" frame -->
+    <node pkg="tf" name="place_publisher" type="static_transform_publisher"
+          args="0.0 -0.5 0.2 0 0 0 1 base_link place 100"/>
+</launch>
