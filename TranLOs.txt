@@ -1,0 +1,39 @@
+1. Explain main concepts related to robotic manipulation
+2. read scientific literature in robotics to choose approaches for a particular problem
+3. implement state-of-the-art algorithms
+4. Understand problems of motion planning as planning of trajectories in search space. 
+5.  Understand basic approaches of robot motion control.
+6. Understand basic approaches of force and impedance
+control. Understand how control can be partitioned with multiple
+objectives
+7. Increase understanding and gain intuition on mechanics of manipulation. Understand the theory of form closure grasp planning.Understand analytical models of contact with friction. Use those to define quality measures for grasps.
+8. Understand application areas of learning in robotics. Understand challenges of learning in robotics
+9. Imitation learning
+10. VLAs Generalist Robot Policies
+=================================================
+1. Explain the fundamental principles of robotic manipulation, including kinematics, dynamics, contact mechanics, friction, and object–robot interaction.
+2. Apply software tools and algorithms to process visual data (e.g., images or point clouds) for perception in robotic manipulation.
+3. Apply motion planning algorithms to generate feasible manipulation trajectories under constraints such as collisions and task requirements.
+4. Explain fundamental robot motion control approaches, including position, velocity, and torque control.
+5. Implement control strategies to achieve manipulation objectives such as motion tracking, compliance, and force regulation.
+6. Explain and apply theoretical foundations of grasp stability, including form closure, force closure, and analytical models of frictional contact, to evaluate grasp quality.
+7. Discuss the role of machine learning in robotic manipulation and the challenges associated with learning in physical systems.
+8. Implement learning-based approaches such as imitation learning for robotic manipulation tasks.
+9. Analyze the advantages and limitations of modern learning paradigms such as vision-language-action (VLA) models and generalist robot policies.
+10. Propose and justify novel solutions for manipulation tasks using the techniques covered in the course and scientific literature in robotics .
+
+
+======================================================
+L1: Course overview, Recap fundamental robotics, ROS
+L2: 
+L3:
+L4:
+L5:
+L6:
+L7:
+L8:
+L9:
+L10:
+L11:
+L12:
+L13:
