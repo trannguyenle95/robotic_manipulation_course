@@ -1,0 +1,25 @@
+h5py
+ipython
+matplotlib==2.2.0
+NearPy
+numpy==1.16.6
+pillow==4.3.0
+python-dateutil
+pyyaml
+scikit-image==0.14.5
+scikit-learn==0.20.4
+scipy
+six
+trimesh
+triangle
+ruamel.yaml
+# mayavi - checkout 4.5.0 (sudo apt-get install python-sphinx)
+sphinx==1.6.7
+opencv-python
+PyOpenGL==3.1.5
+pyglet
+# visualization
+rtree
+lxml
+# dex-net
+cvxopt==1.1.8

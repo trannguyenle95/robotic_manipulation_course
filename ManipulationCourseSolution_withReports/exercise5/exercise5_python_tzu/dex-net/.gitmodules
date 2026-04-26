@@ -1,0 +1,21 @@
+[submodule "deps/autolab_core"]
+	path = deps/autolab_core
+	url = https://github.com/BerkeleyAutomation/autolab_core
+[submodule "deps/perception"]
+	path = deps/perception
+	url = https://github.com/BerkeleyAutomation/perception
+[submodule "deps/SDFGen"]
+	path = deps/SDFGen
+	url = https://github.com/jeffmahler/SDFGen.git
+[submodule "deps/Boost.NumPy"]
+	path = deps/Boost.NumPy
+	url = https://github.com/jeffmahler/Boost.NumPy.git
+[submodule "deps/mayavi"]
+	path = deps/mayavi
+	url = https://github.com/enthought/mayavi
+[submodule "deps/visualization"]
+	path = deps/visualization
+	url = https://github.com/twbabyduck/visualization
+[submodule "deps/meshpy"]
+	path = deps/meshpy
+	url = https://github.com/twbabyduck/meshpy

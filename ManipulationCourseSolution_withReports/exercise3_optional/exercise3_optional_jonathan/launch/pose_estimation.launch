@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!--
+Copyright (c) Aalto  - All Rights Reserved
+Created on: 11/23/18
+    Author: Vladimir Petrik <vladimir.petrik@aalto.fi>
+   Details:
+-->
+<launch>
+    <arg name="look_at_x" default="0.6"/>
+    <arg name="look_at_y" default="0.0"/>
+    <arg name="look_at_z" default="0.0"/>
+    <arg name="distance" default="1.3"/>
+    <arg name="azimuth" default="90"/>
+    <arg name="elevation" default="-45"/>
+
+    <include file="$(find exercise3_optional)/launch/publish_frames.launch"/>
+
+    <include file="$(find lumi_mujoco)/launch/simulation.launch">
+        <arg name="mujoco_model" value="$(find exercise3_optional)/model/robots/sim.urdf"/>
+        <arg name="look_at_x" value="$(arg look_at_x)"/>
+        <arg name="look_at_y" value="$(arg look_at_y)"/>
+        <arg name="look_at_z" value="$(arg look_at_z)"/>
+        <param name="distance" value="$(arg distance)"/>
+        <param name="azimuth" value="$(arg azimuth)"/>
+        <param name="elevation" value="$(arg elevation)"/>
+    </include>
+
+    <arg name="z_min" default="1.8"/>
+    <arg name="z_max" default="2.1"/>
+
+    <arg name="maxIter" default="100000"/>
+    <arg name="numSamples" default="8"/>
+    <arg name="corrRand" default="15"/>
+    <arg name="simTresh" default="0.5"/>
+    <arg name="maxCorr" default="2.0"/>
+    <arg name="inlierFraction" default="0.30"/>
+
+
+    <node name="pose_estimation" pkg="exercise3_optional" type="pose_estimation" output="screen">
+        <param name="z_min" value="$(arg z_min)"/>
+        <param name="z_max" value="$(arg z_max)"/>
+        <param name="objectPC" value="$(find exercise3_optional)/model/box/box.pcd"/>
+
+        <param name="maxIter" value="$(arg maxIter)"/>
+        <param name="numSamples" value="$(arg numSamples)"/>
+        <param name="corrRand" value="$(arg corrRand)"/>
+        <param name="simTresh" value="$(arg simTresh)"/>
+        <param name="maxCorr" value="$(arg maxCorr)"/>
+        <param name="inlierFraction" value="$(arg inlierFraction)"/>
+    </node>
+</launch>

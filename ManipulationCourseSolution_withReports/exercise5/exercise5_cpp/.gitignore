@@ -1,0 +1,14 @@
+*.ilk
+*.pdb
+*.sln
+*.tlog
+*.obj
+*.log
+*.filters
+*.user
+*.vcxproj
+**/robitc_man_5/robitc_man_5/Debug
+**/eigen-master
+**/boost_1_72_0
+**/.vs
+**/version2/version2_ex5/Debug
